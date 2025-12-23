@@ -1,0 +1,37 @@
+{
+  "telemetry": {
+    "heartRate": 86,
+    "moodIndex": 6.7,
+    "signalSeries": [
+      { "t": 0, "y": 0.12 },
+      { "t": 60, "y": 0.2 },
+      { "t": 120, "y": 0.18 },
+      { "t": 180, "y": 0.35 },
+      { "t": 240, "y": 0.28 },
+      { "t": 300, "y": 0.31 }
+    ]
+  },
+  "session": {
+    "operatorNote": "KIWI looks stable. Monitor heart variance."
+  },
+  "alerts": [
+    {
+      "id": "a1",
+      "level": "warning",
+      "message": "Heart spike detected 14m ago",
+      "ts": "2025-12-21T08:41:00Z"
+    },
+    {
+      "id": "a2",
+      "level": "info",
+      "message": "Mood drift trending upward",
+      "ts": "2025-12-21T08:52:00Z"
+    },
+    {
+      "id": "a3",
+      "level": "danger",
+      "message": "Signal noise above baseline",
+      "ts": "2025-12-21T09:05:00Z"
+    }
+  ]
+}

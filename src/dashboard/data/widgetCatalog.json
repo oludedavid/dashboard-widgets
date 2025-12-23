@@ -1,0 +1,92 @@
+{
+  "widgets": [
+    {
+      "id": "metric.heartRate",
+      "type": "MetricCard",
+      "title": "Heart",
+      "dataBinding": { "source": "telemetry", "path": "heartRate" },
+      "format": { "unit": "bpm", "decimals": 0 },
+      "thresholds": [
+        { "op": ">", "value": 120, "severity": "warning", "label": "High" },
+        { "op": "<", "value": 50, "severity": "warning", "label": "Low" }
+      ]
+    },
+    {
+      "id": "metric.moodIndex",
+      "type": "MetricCard",
+      "title": "Mood Index",
+      "dataBinding": { "source": "telemetry", "path": "moodIndex" },
+      "format": { "unit": "/10", "decimals": 1 },
+      "thresholds": [
+        { "op": "<", "value": 4, "severity": "danger", "label": "Critical" }
+      ]
+    },
+    {
+      "id": "static.banner",
+      "type": "StaticBanner",
+      "title": "System",
+      "text": "This console is a prototype. Treat insights as advisory.",
+      "variant": "info"
+    },
+    {
+      "id": "display.note",
+      "type": "DisplayLabel",
+      "title": "Operator Note",
+      "dataBinding": { "source": "session", "path": "operatorNote" }
+    },
+    {
+      "id": "list.alerts",
+      "type": "AlertList",
+      "title": "Alerts",
+      "dataBinding": { "source": "alerts", "path": "$" },
+      "maxItems": 6
+    },
+    {
+      "id": "form.profile",
+      "type": "FormCard",
+      "title": "Profile Update",
+      "schema": {
+        "fields": [
+          {
+            "id": "fullName",
+            "label": "Full name",
+            "kind": "TextInput",
+            "required": true,
+            "minLen": 3
+          },
+          {
+            "id": "email",
+            "label": "Email",
+            "kind": "TextInput",
+            "required": true,
+            "pattern": "^[^@]+@[^@]+\\.[^@]+$"
+          },
+          {
+            "id": "role",
+            "label": "Role",
+            "kind": "Select",
+            "required": true,
+            "options": ["student", "tutor", "admin"]
+          },
+          {
+            "id": "newsletter",
+            "label": "Newsletter",
+            "kind": "Toggle",
+            "required": false
+          }
+        ]
+      },
+      "submitAction": {
+        "type": "toast",
+        "message": "Saved profile draft (local)"
+      }
+    },
+    {
+      "id": "chart.signal",
+      "type": "SignalChart",
+      "title": "Signal (last 2h)",
+      "dataBinding": { "source": "telemetry", "path": "signalSeries" },
+      "chart": { "downsample": { "enabled": true, "targetPoints": 120 } }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "dashboardId": "db_karabo_kiwi_001",
+  "title": "Karabo x KIWI — Ops Console",
+  "version": 1,
+  "layout": {
+    "type": "stack",
+    "id": "root",
+    "gap": 16,
+    "children": [
+      {
+        "type": "row",
+        "id": "row_top",
+        "gap": 16,
+        "children": [
+          {
+            "type": "widget",
+            "id": "w_metric_heart",
+            "widgetId": "metric.heartRate"
+          },
+          {
+            "type": "widget",
+            "id": "w_metric_mood",
+            "widgetId": "metric.moodIndex"
+          },
+          {
+            "type": "widget",
+            "id": "w_static_banner",
+            "widgetId": "static.banner"
+          }
+        ]
+      },
+      {
+        "type": "row",
+        "id": "row_mid",
+        "gap": 16,
+        "children": [
+          {
+            "type": "column",
+            "id": "col_left",
+            "gap": 16,
+            "children": [
+              {
+                "type": "widget",
+                "id": "w_form_profile",
+                "widgetId": "form.profile"
+              },
+              {
+                "type": "widget",
+                "id": "w_list_alerts",
+                "widgetId": "list.alerts"
+              }
+            ]
+          },
+          {
+            "type": "column",
+            "id": "col_right",
+            "gap": 16,
+            "children": [
+              {
+                "type": "widget",
+                "id": "w_display_note",
+                "widgetId": "display.note"
+              },
+              {
+                "type": "widget",
+                "id": "w_chart_signal",
+                "widgetId": "chart.signal"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

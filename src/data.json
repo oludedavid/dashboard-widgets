@@ -1,0 +1,57 @@
+{
+  "deviceId": "XFEL-001",
+  "timestamp": 1733900000000,
+  "status": "online",
+  "properties": {
+    "temperature": {
+      "name": "temperature",
+      "value": 23.7,
+      "schemaAttrs": {
+        "label": "Temperature",
+        "units": "°C",
+        "valueType": "float",
+        "defaultValue": 20.0,
+        "min": -40,
+        "max": 80
+      },
+      "timeAttrs": {
+        "seconds": 1733900000,
+        "nanos": 123000000
+      }
+    },
+    "pressure": {
+      "name": "pressure",
+      "value": 1.02,
+      "schemaAttrs": {
+        "label": "Pressure",
+        "units": "bar",
+        "valueType": "float",
+        "defaultValue": 1.0,
+        "min": 0.5,
+        "max": 2.0
+      },
+      "timeAttrs": {
+        "seconds": 1733900000,
+        "nanos": 123000000
+      }
+    },
+    "vectorSignal": {
+      "name": "vectorSignal",
+      "value": [
+        0.02, 0.15, 0.31, 0.46, 0.55, 0.49, 0.3, 0.1, -0.05, -0.18, -0.26,
+        -0.29, -0.25, -0.15, -0.03, 0.09
+      ],
+      "schemaAttrs": {
+        "label": "Waveform",
+        "units": "arb",
+        "valueType": "vector_float",
+        "defaultValue": [],
+        "length": 16
+      },
+      "timeAttrs": {
+        "seconds": 1733900000,
+        "nanos": 123000000
+      }
+    }
+  }
+}
